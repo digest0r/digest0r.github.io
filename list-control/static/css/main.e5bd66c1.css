@@ -1,0 +1,2 @@
+.lists{display:flex;max-width:700px}.list-1,.list-2{width:50%}.list-2{margin-left:.5rem}.list-item{border:1px solid #f0f0f0;cursor:pointer;margin-bottom:.5rem;padding:.5rem}.list-item:hover{background-color:#f0f0f0}.list-item--selected{background-color:aqua}
+/*# sourceMappingURL=main.e5bd66c1.css.map*/
