@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.46rem;
+      }
+      .lines {
+        padding: 70px 0;
+      }
+
+      .red-bg {
+        left: 46px;
+        right: 46px;
+        top: 1500%;
+      }
+
+      .line > div {
+        padding: 6px 54px;
+      }
+      .col1 {
+        width: 50%;
+      }
+      .col2 {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="3.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Ekológia prostredia</div>
+        <div class="col2">100 %-ná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Nerastné zdroje</div>
+        <div class="col2">Rovnomerne rozdeľované</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Biologické zdroje</div>
+        <div class="col2">Prirodzene dostupné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Monopolizácia zdrojov</div>
+        <div class="col2">Neprípustná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Klíma kdekoľvek na planéte</div>
+        <div class="col2">Optimalizovaná, riadená</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>

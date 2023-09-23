@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.37rem;
+      }
+      .lines {
+        padding: 16px 0;
+      }
+
+      .red-bg {
+        left: 26px;
+        right: 10px;
+        top: 1632%;
+      }
+
+      .line > div {
+        padding: 6px 30px;
+      }
+      .col1 {
+        width: 49%;
+      }
+      .col2 {
+        width: 51%;
+        padding-left: 32px !important;
+      }
+      .spec-1 {
+        white-space: nowrap;
+        transform: scale(1);
+        padding-right: unset !important;
+      }
+      .spec-2 {
+        white-space: nowrap;
+        transform: scale(1);
+        padding-right: unset !important;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="5.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Politickí zástupcovia/politika</div>
+        <div class="col2">Prestanú mať zmysel</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Navrhovanie zákonov a predpisov</div>
+        <div class="col2">Umožnené každému človeku</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Prijímanie zákonov a predpisov</div>
+        <div class="col2">Spoločné formou všeľudového hlasovania</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Moc nad inými ľuďmi</div>
+        <div class="col2">Vylúčená</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Zameranie vedeckého pokroku</div>
+        <div class="col2">Výlučne na mierové účely a v prospech človeka</div>
+      </div>
+
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Mienkotvorné médiá</div>
+        <div class="col2">Patria výlučne celej spoločnosti</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Popularizácia</div>
+        <div class="col2">Pozitívnych, morálnych a duchovných prvkov</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Potieranie</div>
+        <div class="col2">Negatívnych, antihumánnych prejavov a postojov</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Ozbrojené konflikty a násilie</div>
+        <div class="col2">Neprípustné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Zločinnosť</div>
+        <div class="col2">Nemožná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">
+          Silové zložky (armáda, polícia, bezpečnostné služby)
+        </div>
+        <div class="col2">Nepotrebné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1 spec-1">
+          Riešenie mimoriadnych situácií (prírodných, technogénnych…)
+        </div>
+        <div class="col2">
+          Jednotná celosvetová konsolidovaná záchranná služba
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">
+          Migrácia obyvateľstva kvôli zlým životným podmienkam
+        </div>
+        <div class="col2">Po stabilizovaní klímy nepotrebná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Voľný pohyb po planéte</div>
+        <div class="col2">Áno, bez povolení, pasov a víz</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Jeden spoločný jazyk ľudstva</div>
+        <div class="col2 spec-2">
+          Áno, so zachovaním všetkých doterajších ako kultúrnych hodnôt
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>

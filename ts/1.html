@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.44rem;
+      }
+      .lines {
+        padding: 70px 0;
+      }
+
+      .red-bg {
+        left: 46px;
+        right: 11px;
+        top: 1500%;
+      }
+
+      .line > div {
+        padding: 6px 54px;
+      }
+      .col1 {
+        width: 761px;
+      }
+      .col2 {
+        width: 1009px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="1.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Čo je najvyššie cenené</div>
+        <div class="col2">Život každého jedného človeka</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Sloboda</div>
+        <div class="col2">Zaistená každému človeku</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Bezpečnosť</div>
+        <div class="col2">Úplná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Vzdelávanie</div>
+        <div class="col2">
+          Pre každého špičkové, bezplatné, dostupné podľa želania
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Rovnoprávnosť</div>
+        <div class="col2">Všetkým garantovaná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Informovanosť obyvateľstva</div>
+        <div class="col2">Transparentná a otvorená</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Ideológia</div>
+        <div class="col2">Vysoko humánna, pozitívna</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Forma riadenia spoločnosti</div>
+        <div class="col2">Plná samospráva, priebežné a trvalé referendum</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>

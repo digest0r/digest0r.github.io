@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.45rem;
+      }
+      .lines {
+        padding: 48px 0;
+      }
+
+      .red-bg {
+        left: 26px;
+        right: 10px;
+        top: 1632%;
+        opacity: 0;
+      }
+      .line > div {
+        padding: 6px 30px;
+      }
+      .col1 {
+        width: 49%;
+      }
+      .col2 {
+        width: 51%;
+        padding-left: 32px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="6.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Sebarealizácia človeka</div>
+        <div class="col2">Neobmedzená v rámci individuálnej slobody</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Osobnostný rozvoj</div>
+        <div class="col2">Všestranný a spoločensky podporovaný</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Dlhovekosť</div>
+        <div class="col2">Áno, viacnásobok bežnej hranice</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>

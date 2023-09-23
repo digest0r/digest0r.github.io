@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.37rem;
+      }
+      .lines {
+        padding: 4px 0;
+      }
+
+      .red-bg {
+        left: 26px;
+        right: 10px;
+        top: 1632%;
+      }
+
+      .line > div {
+        padding: 6px 30px;
+      }
+      .col1 {
+        width: 49%;
+      }
+      .col2 {
+        width: 51%;
+        padding-left: 32px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="4.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Základný príjem pre každého</div>
+        <div class="col2">
+          Dôstojný, dostatočný na komfortný život, bezpodmienečný
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Zamestnanie</div>
+        <div class="col2">Garantované podľa želania človeka</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Odmena za identickú prácu</div>
+        <div class="col2">Rovnaká na celom svete</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Ceny analogických tovarov a služieb</div>
+        <div class="col2">Rovnaké na celom svete</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Inflácia</div>
+        <div class="col2">Nie je možná</div>
+      </div>
+
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Mena</div>
+        <div class="col2">Jednotná na celom svete, bezúročná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Sociálne zabezpečenie</div>
+        <div class="col2">Úplné a bezplatné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">
+          Maximálna kapitalizácia spoločenskej bunky (rodiny)
+        </div>
+        <div class="col2">
+          Zhora ohraničená dohodou všetkých ľudí v referende
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Prehľad o verejných financiách</div>
+        <div class="col2">Každému detailne dostupný (MFK Voschod)</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Bankové, nebankové, poisťovacie finančné služby</div>
+        <div class="col2">Nepotrebné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Staré nesplatené úvery, pôžičky, hypotéky</div>
+        <div class="col2">Anulované</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Nové úvery, pôžičky</div>
+        <div class="col2">Bezúročné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Komunálne poplatky</div>
+        <div class="col2">Zrušené</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Komunálne dlžoby</div>
+        <div class="col2">Odpísané</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Dane a poplatky pre občanov</div>
+        <div class="col2">Neexistujúce</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">
+          Všetky vynálezy, patenty, autorské práva a licencie
+        </div>
+        <div class="col2">Uvoľnené k bezplatnému užívaniu všetkými ľuďmi</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>

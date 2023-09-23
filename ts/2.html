@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      html,
+      body {
+        font-size: 1.4rem;
+      }
+      .lines {
+        padding: 70px 0;
+      }
+
+      .red-bg {
+        left: 46px;
+        right: 35px;
+        top: 1500%;
+      }
+
+      .line > div {
+        padding: 6px 54px;
+      }
+      .col1 {
+        width: 729px;
+      }
+      .col2 {
+        width: calc(100% - 24px - 747px);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="2.jpg" />
+    <div class="lines">
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Zdravie</div>
+        <div class="col2">Optimálne počas celého života</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Zdravotná starostlivosť</div>
+        <div class="col2">Špičková a bezplatná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Dostupnosť jedla</div>
+        <div class="col2">Celoplošná, bez obmedzení</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Kvalita potravín</div>
+        <div class="col2">Najvyššia možná</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Pitná voda</div>
+        <div class="col2">
+          V najvyššej kvalite, pre každého a všade bez obmedzenia
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Bývanie/strecha nad hlavou</div>
+        <div class="col2">Každému garantované, do 60 m2/osobu bezplatné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Závislosť na dodávkach energií</div>
+        <div class="col2">
+          Nulová, každé obydlie vybavené generátorom voľnej energie
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Komfort bývania</div>
+        <div class="col2">Zaistená klimatizácia a kúrenie podľa potreby</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Vybavenie domácnosti</div>
+        <div class="col2">
+          Prvotriedne materiály, špičkové zariadenia a technika
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Odevy a obuv</div>
+        <div class="col2">
+          Najvyššej kvality, maximálne pohodlné, zdravotne nezávadné
+        </div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Domáce práce</div>
+        <div class="col2">Vďaka dostupným technológiám nepotrebné</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Voľný čas (trvanie, náplň)</div>
+        <div class="col2">Podľa vlastného uváženia</div>
+      </div>
+      <div class="line">
+        <div class="red-bg"></div>
+        <div class="col1">Produktivita, kondícia človeka</div>
+        <div class="col2">Plná a dlhodobo udržiavaná</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const lines = Array.from(document.querySelectorAll(".line"));
+
+      lines.forEach((line) => {
+        line.addEventListener("click", (event) => {
+          const lineElement = event.target.closest(".line");
+          if (lineElement.classList.contains("selected")) {
+            lineElement.classList.remove("selected");
+          } else {
+            lineElement.classList.add("selected");
+          }
+        });
+      });
+    });
+  </script>
+</html>
